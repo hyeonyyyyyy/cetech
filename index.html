@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> <!-- 0113 추가-->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>농업용 저수지 통합수질관리시스템</title>
+	<meta name="Author" content="농업용 저수지 통합수질관리시스템">
+	<meta name="Keywords" content="농업용 저수지 통합수질관리시스템">
+    <meta name="Description" content="농업용 저수지 통합수질관리시스템">
+	<link rel="stylesheet" type="text/css" href="css/BasicSet.css">
+	<link rel="stylesheet" type="text/css" href="css/sub.css">
+	<link rel="stylesheet" type="text/css" href="XEIcon-master/xeicon.min.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/ui.js"></script>
+    
+	<style type="text/css">
+		.m_ver select{ appearance: none; -webkit-appearance: none; -moz-appearance: none; background:#fff;}
+		.m_ver select.sel_ico{  background:url(images/common/icon_select_arrow.png) no-repeat #fff; background-position: right 8px center; background-size:10px auto; padding:8px 25px 8px 8px;}
+		.m_ver input[type=text], input[type=password]{ padding:6px; appearance: none; -webkit-appearance: none; -moz-appearance: none; border-radius:0;}
+    </style>
+	<style type="text/css">
+		.m_ver h3{ border-bottom:2px solid #005aab; padding-bottom:10px; font-size:20px;}
+		.m_ver select{ appearance: none; -webkit-appearance: none; -moz-appearance: none; background:#fff;}
+		.m_ver select.sel_ico{ background:url(images/common/icon_select_arrow.png) no-repeat #fff; background-position: right 8px center; background-size:10px auto; padding:8px 25px 8px 8px;}
+		.m_ver input[type=text], input[type=password]{ padding:8px; appearance: none; -webkit-appearance: none; -moz-appearance: none; border-radius:0;}
+		.mv_tit{ font-size:15px; display: flex; align-items: center;}
+        .mv_txt{font-size:15px; margin-left: 10px; color: #555555;}
+        .mv_txt2{font-size:15px; margin-right: 10px; color: #555555; vertical-align: middle;}
+		.m_ver_search_cont > ul{ background:#e9ecf4; border-top:1px solid #dddddd; border-left:1px solid #dddddd; border-right:1px solid #dddddd;}
+		.m_ver_search_cont > ul > li{ border-bottom:1px solid #dcdcdc; padding:10px; display: flex; justify-content: space-between;}
+    </style>
+</head>
+<body>
+<div id="wrap" class="m_ver">
+    <div class="popWarp">
+    	<p class="popTit">주오염원 현황 등록<span class="popClose"><a href="" onclick="self.close();" title="닫기">닫기</a></span></p>
+        <div class="popCont">
+            <div class="m_ver_search_cont">
+                <ul>
+                    <li>
+                        <p class="mv_tit">조사년도</p>
+                        <div class="W70p">
+                            <select class="W100p sel_ico">
+                                <option>2023</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="mv_tit">본부</p>
+                        <div class="W70p">
+                            <select class="W100p sel_ico">
+                                <option>- 선택 -</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="mv_tit">지사</p>
+                        <div class="W70p">
+                            <select class="W100p sel_ico">
+                                <option>- 선택 -</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="mv_tit">시설명</p>
+                        <div class="W70p">
+                            <select class="W100p sel_ico">
+                                <option>- 선택 -</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="mv_tit">주오염원</p>
+                        <div class="W70p">
+                            <select class="W100p sel_ico">
+                                <option>축산계</option>
+                                <option>산업계</option>
+                                <option>매립계</option>
+                                <option>양식계</option>
+                                <option>환경기초시설</option>
+                                <option>폐광산</option>
+                                <option>낚시터</option>
+                                <option>주유소</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="mv_tit">오염원명칭</p>
+                        <div class="W70p">
+                            <select class="W100p sel_ico">
+                                <option>돼지</option>
+                                <option>한우</option>
+                                <option>젖소</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="mv_tit">규모</p>
+                        <div class="W70p">
+                            <input type="text" class="W110 MgB5" placeholder=""><span class="mv_txt">두</span>
+                            <br>
+                            <select class="W100p sel_ico">
+                                <option>사육두수</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="mv_tit">좌표</p>
+                        <div class="W70p">
+                            <div class="MgB5"> <span class="mv_txt2">X좌표</span><input type="text" class="W110" placeholder="123.45" ></div>
+                            <div> <span class="mv_txt2">Y좌표</span><input type="text" class="W110" placeholder="123.45" ></div>
+                        </div>
+                    </li>
+                        
+                    <li>
+                        <p class="mv_tit">작성일</p>
+                        <div class="W70p">
+                            <input type="text" class="W110" placeholder="2023-11-03"><img src="images/sub/calendar.png" alt="달력" class="calendar MgL5">
+                        </div>
+                    </li>      
+                    <li>
+                        <p class="mv_tit">작성자</p>
+                       <div class="W70p">
+                            <input type="text" class="W110" placeholder="이름"> <input type="text" class="W110" placeholder="직책"> 
+                       </div>
+                    </li>
+                   
+                </ul>
+                <div class="btn_area AR MgB30">
+                    <a href="" class="btn_m"><i class="xi-plus"></i>추가</a> 
+                    <a href="" class="btn_m"><i class="xi-minus"></i>삭제</a>
+                    <a href="" class="btn_m bu">저장</a>
+                </div>
+            </div>
+           
+        </div>
+        
+        </div>
+    </div>
+</div>
+</body>
+</html>
